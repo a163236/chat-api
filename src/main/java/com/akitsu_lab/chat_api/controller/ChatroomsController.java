@@ -3,10 +3,12 @@ package com.akitsu_lab.chat_api.controller;
 import com.akitsu_lab.chat_api.model.Chatroom;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@RequestMapping("/chatrooms")
 @RestController
 public class ChatroomsController {
 
@@ -16,7 +18,7 @@ public class ChatroomsController {
         this.jdbcClient = jdbcClient;
     }
 
-    @GetMapping("/chatrooms")
+    @GetMapping()
     public List<Chatroom> getChatrooms() {
         return jdbcClient.sql("SELECT * FROM chatrooms")
                 .query()
