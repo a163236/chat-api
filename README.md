@@ -30,26 +30,10 @@ https://www.postman.com/downloads/
 - 結果の取得: query()メソッドを使用してクエリを実行し、singleResult()やlistResult()で結果を取得します。
 - 更新の実行: update()メソッドでデータの挿入や更新を行います。
 
-```java
+```
 jdbcClient.sql("SELECT * FROM chatrooms")
-                .
-
-query()
-                .
-
-listOfRows()
-                .
-
-stream()
-                .
-
-map(row ->new
-
-Chatroom((int) row.
-
-get("room_id"), (String)row.
-
-get("room_name"))).
-
-toList();
+                .query()
+                .listOfRows()
+                .stream()
+                .map(row -> new Chatroom((int) row.get("room_id"), (String) row.get("room_name"))).toList();
 ```
