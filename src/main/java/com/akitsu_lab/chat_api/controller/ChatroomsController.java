@@ -6,16 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class GreetingController {
+public class ChatroomsController {
 
     @Autowired
     private JdbcClient jdbcClient;
 
-    @GetMapping("/greeting")
-    public String greeting() {
-
-        // JdbcTemplateじゃなくてJdbcClientを使う方がスマートかも https://qiita.com/suke_masa/items/57399a6c94df7b38a8be
-        jdbcClient.sql("SELECT * FROM users").query().listOfRows().forEach(System.out::println);
-        return "Hello";
+    @GetMapping("/chatrooms")
+    public String getChatrooms() {
+        jdbcClient.sql("SELECT * FROM chatrooms").query().listOfRows().forEach(System.out::println);
+        return "chatrooms";
     }
 }
