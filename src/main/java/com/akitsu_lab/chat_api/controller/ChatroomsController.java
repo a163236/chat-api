@@ -1,7 +1,6 @@
 package com.akitsu_lab.chat_api.controller;
 
 import com.akitsu_lab.chat_api.model.Chatroom;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,8 +10,11 @@ import java.util.List;
 @RestController
 public class ChatroomsController {
 
-    @Autowired
-    private JdbcClient jdbcClient;
+    private final JdbcClient jdbcClient;
+
+    public ChatroomsController(JdbcClient jdbcClient) {
+        this.jdbcClient = jdbcClient;
+    }
 
     @GetMapping("/chatrooms")
     public List<Chatroom> getChatrooms() {
