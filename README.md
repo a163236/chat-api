@@ -15,13 +15,13 @@ docker compose up --build -d
 ## Start API server
 
 ```shell
-gradle bootRun
+./gradlew bootRun
 ```
 
 ## Build jar
 
 ```shell
-gradle build
+./gradlew build
 ```
 
 ## Recommendation
