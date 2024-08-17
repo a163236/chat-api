@@ -9,7 +9,7 @@ https://github.com/Akitsu-Lab/chat-db/blob/main/keita-memo.md
 Example
 
 ```shell
-docker compose up --build -d
+docker compose -f ../chat-db/docker-compose.yml up --build -d
 ```
 
 ## Start API server
@@ -21,7 +21,7 @@ docker compose up --build -d
 ## Build jar
 
 ```shell
-./gradlew build
+./gradlew bootJar
 ```
 
 ## Recommendation
