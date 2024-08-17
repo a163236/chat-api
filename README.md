@@ -18,6 +18,12 @@ docker compose up --build -d
 gradle bootRun
 ```
 
+## Build jar
+
+```shell
+gradle build
+```
+
 ## Recommendation
 
 Postman for API testing
