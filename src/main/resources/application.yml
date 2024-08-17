@@ -2,7 +2,7 @@ spring:
   application:
     name: chat-api
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/db
+    url: jdbc:mysql://${DB_HOST:localhost}:3306/${DB_DATABASE:chat}
     username: root
     password: password
     driver-class-name: com.mysql.cj.jdbc.Driver
