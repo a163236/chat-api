@@ -21,7 +21,7 @@ docker compose -f ../chat-db/docker-compose.yml up --build -d
 ## Build jar
 
 ```shell
-./gradlew build
+./gradlew bootJar
 ```
 
 ## Recommendation
