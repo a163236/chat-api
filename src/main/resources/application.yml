@@ -2,7 +2,11 @@ spring:
   application:
     name: chat-api
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}:3306/${DB_DATABASE:chat}
-    username: root
-    password: password
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    url: jdbc:mysql://${DB_HOST:localhost}:3306/${DB_DATABASE:chat}
+    #    username: root
+    #    password: password
+    #    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:db2://125f9f61-9715-46f9-9399-c8177b21803b.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud:30426/bludb:user=cyc20812;password=vgczvQa0kNDcKLvL;sslConnection=true;
+    #    username: cyc20812
+    #    password: vgczvQa0kNDcKLvL
+    driver-class-name: com.ibm.db2.jcc.DB2Driver
