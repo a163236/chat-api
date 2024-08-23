@@ -2,7 +2,7 @@ spring:
   application:
     name: chat-api
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}:3306/${DB_DATABASE:chat}
-    username: root
+    url: jdbc:postgresql://${DB_HOST:localhost}:5432/${DB_DATABASE:chat}
+    username: chat_owner
     password: password
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.postgresql.Driver

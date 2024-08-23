@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 @RequestMapping("/chatrooms")
@@ -24,7 +25,7 @@ public class ChatroomsController {
                 .query()
                 .listOfRows()
                 .stream()
-                .map(row -> new Chatroom((int) row.get("room_id"), (String) row.get("room_name"))).toList();
+                .map(row -> new Chatroom((int) row.get("room_id"), (String) row.get("room_name"), (Timestamp) row.get("created_at"))).toList();
     }
 }
 
